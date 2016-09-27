@@ -76,7 +76,8 @@ describe('lumberjill', function() {
 
         var loggers = [
             lumberjill.create({
-                name: 'test'
+                name: 'test',
+                level: lumberjill.INFO
             }),
             lumberjill.create({
                 name: 'test-raw',
