@@ -38,6 +38,7 @@
     "nsp": "^2.6.1"
   },
   "dependencies": {
+    "assert-plus": "^1.0.0",
     "bunyan": "^1.8.1",
     "chalk": "^1.1.3",
     "json-stringify-safe": "^5.0.1",
