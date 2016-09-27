@@ -1,0 +1,45 @@
+{
+  "name": "lumberjill",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "description": "a bunyan serializer for CLIs",
+  "homepage": "https://github.com/DonutEspresso/lumberjill",
+  "author": {
+    "name": "Alex Liu",
+    "email": "donutespresso@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DonutEspresso/lumberjill.git"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "lumberjill",
+    "bunyan",
+    "verror",
+    "restify-errors",
+    "cli",
+    "serializer",
+    "logging"
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.6.1",
+    "istanbul": "^0.4.5",
+    "jscs": "^2.9.0",
+    "mocha": "^3.1.0",
+    "nsp": "^2.6.1"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.1",
+    "chalk": "^1.1.3",
+    "json-stringify-safe": "^5.0.1",
+    "lodash": "^4.16.2",
+    "restify-errors": "^4.3.0",
+    "safe-json-stringify": "^1.0.3"
+  }
+}
