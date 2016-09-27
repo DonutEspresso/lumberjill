@@ -37,6 +37,7 @@ COVERAGE_FILES := $(ROOT)/coverage
 GIT_HOOK_SRC    = '../../tools/githooks/pre-push'
 GIT_HOOK_DEST   = '.git/hooks/pre-push'
 SHRINKWRAP     := $(ROOT)/npm-shrinkwrap.json
+LCOV           := $(ROOT)/coverage/lcov.info
 ALL_FILES      := $(shell find $(LIB_FILES) $(TEST_FILES) -name '*.js' -type f)\
 				  $(shell find $(ROOT) -name '*.js' -type f -maxdepth 1)
 
