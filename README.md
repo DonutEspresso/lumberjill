@@ -46,7 +46,8 @@ $ node test.js
 }
 ```
 
-Support for VError serialization is built-in:
+Support for [VError](https://github.com/joyent/node-verror) serialization is
+built-in:
 
 ```sh
 var VError = require('verror');
@@ -96,7 +97,8 @@ Caused by: Error: underlying boom!
     at node.js:974:3
 ```
 
-Support for restify-errors is also built-in:
+Support for [restify-errors](https://github.com/restify/errors) is also
+built-in:
 
 ```js
 var restifyErrs = require('restify-errors');
@@ -161,13 +163,12 @@ level names instead of the numbers used by bunyan.
 $ node
 > require('lumberjill');
 { create: [Function: create],
-  DEBUG: 20,
   TRACE: 10,
+  DEBUG: 20,
   INFO: 30,
   WARN: 40,
   ERROR: 50,
   FATAL: 60 }
-}
 ```
 
 
@@ -179,8 +180,8 @@ logger. Takes the following options:
  * `options.name` {String} name of the logger
  * `[options.raw]` {Boolean} when true, logs raw bunyan JSON records
  * `[options.level]` {Number} Possible values 0, 10, 20, 30, 40, 50, 60. Can
-be conveniently used via the main exports object by logger friendly levels,
-i.e., when true, logs raw bunyan JSON records
+be conveniently used via the main exports object by using the logger friendly
+name levels.
 
 __Returns__: {Object} a bunyan logger. Supports all bunyan logger methods.
 
