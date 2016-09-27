@@ -11,8 +11,9 @@
 
 > a bunyan wrapper for simple CLT logging
 
-A thin wrapper over bunyan for outputting simple CLI style logs. Supports full
-stack trace outputting for Error objects created via VError and restify-error.
+A thin wrapper over bunyan for outputting simple style logs, which are most
+useful for command line tools. Supports full stack trace outputting for Error
+objects created via VError and restify-error.
 
 ## Getting Started
 
