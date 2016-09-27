@@ -74,60 +74,69 @@ describe('lumberjill', function() {
 
     describe('should log stuff', function() {
 
-        var log = lumberjill.create({
-            name: 'test'
-        });
+        var loggers = [
+            lumberjill.create({
+                name: 'test'
+            }),
+            lumberjill.create({
+                name: 'test-raw',
+                raw: true
+            })
+        ];
         var err = new Error('boom!');
+        restifyErrs.makeConstructor('SomethingBadHappenedError');
 
 
-        it('should log text', function() {
-            assert.doesNotThrow(function() {
-                log.info('hi');
-            });
-        });
+        loggers.forEach(function(log) {
 
-        it('should log object and text', function() {
-            assert.doesNotThrow(function() {
-                log.info({
-                    hello: 'world'
-                }, 'hi');
-            });
-        });
-
-        it('should log error and text', function() {
-            assert.doesNotThrow(function() {
-                log.info(err, 'hi');
-            });
-        });
-
-        it('should log wrapped VError and text', function() {
-            var wrapErr = new VError({
-                name: 'SomethingBadHappenedError',
-                cause: err,
-                info: {
-                    foo: 1,
-                    bar: 2
-                }
-            }, 'oh noes!');
-
-            assert.doesNotThrow(function() {
-                log.info(wrapErr, 'hi');
-            });
-        });
-
-        it('should log wrapped restify-error and text', function() {
-
-            restifyErrs.makeConstructor('SomethingBadHappenedError');
-            var wrapErr = new restifyErrs.SomethingBadHappenedError(err, {
-                message: 'oh noes!',
-                context: {
-                    foo: 1,
-                    bar: 2
-                }
+            it('should log text', function() {
+                assert.doesNotThrow(function() {
+                    log.info('hi');
+                });
             });
 
-            assert.doesNotThrow(function() {
-                log.info(wrapErr, 'hi');
+            it('should log object and text', function() {
+                assert.doesNotThrow(function() {
+                    log.info({
+                        hello: 'world'
+                    }, 'hi');
+                });
+            });
+
+            it('should log error and text', function() {
+                assert.doesNotThrow(function() {
+                    log.info(err, 'hi');
+                });
+            });
+
+            it('should log wrapped VError and text', function() {
+                var wrapErr = new VError({
+                    name: 'SomethingBadHappenedError',
+                    cause: err,
+                    info: {
+                        foo: 1,
+                        bar: 2
+                    }
+                }, 'oh noes!');
+
+                assert.doesNotThrow(function() {
+                    log.info(wrapErr, 'hi');
+                });
+            });
+
+            it('should log wrapped restify-error and text', function() {
+
+                var wrapErr = new restifyErrs.SomethingBadHappenedError(err, {
+                    message: 'oh noes!',
+                    context: {
+                        foo: 1,
+                        bar: 2
+                    }
+                });
+
+                assert.doesNotThrow(function() {
+                    log.info(wrapErr, 'hi');
+                });
             });
         });
     });
