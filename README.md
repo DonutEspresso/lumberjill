@@ -8,7 +8,7 @@
 [![bitHound Score](https://www.bithound.io/github/DonutEspresso/lumberjill/badges/score.svg)](https://www.bithound.io/github/DonutEspresso/lumberjill/master)
 [![nsp status](https://img.shields.io/badge/NSP%20status-no%20vulnerabilities-green.svg)](https://travis-ci.org/DonutEspresso/lumberjill)
 
-> a bunyan serializer for CLIs
+> a bunyan wrapper for simple CLT logging
 
 A thin wrapper over bunyan for outputting simple CLI style logs. Supports full
 stack trace outputting for Error objects created via VError and restify-error.

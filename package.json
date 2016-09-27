@@ -2,7 +2,7 @@
   "name": "lumberjill",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "description": "a bunyan serializer for CLIs",
+  "description": "a bunyan wrapper for simple CLT logging",
   "homepage": "https://github.com/DonutEspresso/lumberjill",
   "author": {
     "name": "Alex Liu",
