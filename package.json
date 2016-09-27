@@ -13,6 +13,9 @@
     "url": "git@github.com:DonutEspresso/lumberjill.git"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "make test"
+  },
   "files": [
     "lib"
   ],
