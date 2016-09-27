@@ -1,12 +1,12 @@
 # lumberjill
 
 [![NPM Version](https://img.shields.io/npm/v/lumberjill.svg)](https://npmjs.org/package/lumberjill)
-[![Build Status](https://travis-ci.org//lumberjill.svg?branch=master)](https://travis-ci.org//lumberjill)
-[![Coverage Status](https://coveralls.io/repos/github//lumberjill/badge.svg?branch=master)](https://coveralls.io/github//lumberjill?branch=master)
-[![Dependency Status](https://david-dm.org//lumberjill.svg)](https://david-dm.org//lumberjill)
-[![devDependency Status](https://david-dm.org//lumberjill/dev-status.svg)](https://david-dm.org//lumberjill#info=devDependencies)
-[![bitHound Score](https://www.bithound.io/github//lumberjill/badges/score.svg)](https://www.bithound.io/github//lumberjill/master)
-[![nsp status](https://img.shields.io/badge/NSP%20status-no%20vulnerabilities-green.svg)](https://travis-ci.org//lumberjill)
+[![Build Status](https://travis-ci.org/DonutEspresso/lumberjill.svg?branch=master)](https://travis-ci.org/DonutEspresso/lumberjill)
+[![Coverage Status](https://coveralls.io/repos/github/DonutEspresso/lumberjill/badge.svg?branch=master)](https://coveralls.io/github/DonutEspresso/lumberjill?branch=master)
+[![Dependency Status](https://david-dm.org/DonutEspresso/lumberjill.svg)](https://david-dm.org/DonutEspresso/lumberjill)
+[![devDependency Status](https://david-dm.org/DonutEspresso/lumberjill/dev-status.svg)](https://david-dm.org/DonutEspresso/lumberjill#info=devDependencies)
+[![bitHound Score](https://www.bithound.io/github/DonutEspresso/lumberjill/badges/score.svg)](https://www.bithound.io/github/DonutEspresso/lumberjill/master)
+[![nsp status](https://img.shields.io/badge/NSP%20status-no%20vulnerabilities-green.svg)](https://travis-ci.org/DonutEspresso/lumberjill)
 
 > a bunyan serializer for CLIs
 
