@@ -153,12 +153,27 @@ Caused by: Error: underlying boom!
 
 
 ### TRACE, DEBUG, INFO, WARN, ERROR, FATAL
-Properties on the main exports object that map to logging levels used by bunyan.
-For example, TRACE = 10, INFO = 30, FATAL = 60, etc.
+Properties on the main exports object that map to logging levels used by bunyan:
+These are available primarily so you can instantiate loggers using friendly
+level names instead of the numbers used by bunyan.
+
+```sh
+$ node
+> require('lumberjill');
+{ create: [Function: create],
+  DEBUG: 20,
+  TRACE: 10,
+  INFO: 30,
+  WARN: 40,
+  ERROR: 50,
+  FATAL: 60 }
+}
+```
 
 
-### create
-Create an instance of a lumberjill logger. Takes the following options:
+### create(options)
+Create an instance of a lumberjill logger, which is basically just a bunyan
+logger. Takes the following options:
 
  * `options` {Object} an options object
  * `options.name` {String} name of the logger
