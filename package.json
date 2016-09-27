@@ -39,7 +39,6 @@
     "chalk": "^1.1.3",
     "json-stringify-safe": "^5.0.1",
     "lodash": "^4.16.2",
-    "restify-errors": "^4.3.0",
-    "safe-json-stringify": "^1.0.3"
+    "restify-errors": "^4.3.0"
   }
 }

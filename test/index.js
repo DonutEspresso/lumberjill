@@ -66,7 +66,7 @@ describe('lumberjill', function() {
 
         it('should fail without a name', function() {
             assert.throws(function() {
-                lumberjill.create();
+                lumberjill.create({});
             });
         });
     });
