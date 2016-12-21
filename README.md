@@ -179,6 +179,7 @@ logger. Takes the following options:
  * `options` {Object} an options object
  * `options.name` {String} name of the logger
  * `[options.raw]` {Boolean} when true, logs raw bunyan JSON records
+ * `[options.timestamp]` {Boolean} when true, prepends logs with timestamp
  * `[options.level]` {Number} Possible values 0, 10, 20, 30, 40, 50, 60. Can
 be conveniently used via the main exports object by using the logger friendly
 name levels.
