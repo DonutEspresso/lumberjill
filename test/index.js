@@ -82,6 +82,10 @@ describe('lumberjill', function() {
             lumberjill.create({
                 name: 'test-raw',
                 raw: true
+            }),
+            lumberjill.create({
+                name: 'test-timestamp',
+                timestamp: true
             })
         ];
         var err = new Error('boom!');
