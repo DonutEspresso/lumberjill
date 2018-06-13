@@ -29,13 +29,11 @@
     "logging"
   ],
   "devDependencies": {
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.14",
-    "eslint": "^3.6.1",
-    "istanbul": "^0.4.5",
-    "jscs": "^2.9.0",
-    "mocha": "^3.1.0",
-    "nsp": "^2.6.1"
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
   },
   "dependencies": {
     "assert-plus": "^1.0.0",

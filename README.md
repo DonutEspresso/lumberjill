@@ -5,8 +5,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/DonutEspresso/lumberjill/badge.svg?branch=master)](https://coveralls.io/github/DonutEspresso/lumberjill?branch=master)
 [![Dependency Status](https://david-dm.org/DonutEspresso/lumberjill.svg)](https://david-dm.org/DonutEspresso/lumberjill)
 [![devDependency Status](https://david-dm.org/DonutEspresso/lumberjill/dev-status.svg)](https://david-dm.org/DonutEspresso/lumberjill#info=devDependencies)
-[![bitHound Score](https://www.bithound.io/github/DonutEspresso/lumberjill/badges/score.svg)](https://www.bithound.io/github/DonutEspresso/lumberjill/master)
-[![nsp status](https://img.shields.io/badge/NSP%20status-no%20vulnerabilities-green.svg)](https://travis-ci.org/DonutEspresso/lumberjill)
 
 
 > a bunyan wrapper for simple CLT logging
@@ -203,14 +201,8 @@ Before committing, lint and test your code using the included Makefile:
 make prepush
 ```
 
-If you have style errors, you can auto fix whitespace issues by running:
-
-```sh
-make codestyle-fix
-```
-
 ## License
 
-Copyright (c) 2016 Alex Liu
+Copyright (c) 2018 Alex Liu
 
 Licensed under the MIT license.
