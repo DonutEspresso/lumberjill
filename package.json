@@ -38,10 +38,10 @@
   "dependencies": {
     "assert-plus": "^1.0.0",
     "bunyan": "^1.8.1",
-    "chalk": "^1.1.3",
+    "chalk": "^2.4.1",
     "json-stringify-safe": "^5.0.1",
     "lodash": "^4.16.2",
-    "restify-errors": "^4.3.0",
+    "restify-errors": "^6.1.0",
     "verror": "^1.8.1"
   }
 }

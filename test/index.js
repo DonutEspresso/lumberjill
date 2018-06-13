@@ -89,7 +89,8 @@ describe('lumberjill', function() {
             })
         ];
         var err = new Error('boom!');
-        restifyErrs.makeConstructor('SomethingBadHappenedError');
+        var SomethingBadHappenedError =
+            restifyErrs.makeConstructor('SomethingBadHappenedError');
 
 
         loggers.forEach(function(log) {
@@ -131,9 +132,10 @@ describe('lumberjill', function() {
 
             it('should log wrapped restify-error and text', function() {
 
-                var wrapErr = new restifyErrs.SomethingBadHappenedError(err, {
+                var wrapErr = new SomethingBadHappenedError({
+                    cause: err,
                     message: 'oh noes!',
-                    context: {
+                    info: {
                         foo: 1,
                         bar: 2
                     }
