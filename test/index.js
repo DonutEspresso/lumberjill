@@ -3,46 +3,55 @@
 'use strict';
 
 // external modules
-var assert = require('chai').assert;
-var restifyErrs = require('restify-errors');
-var VError = require('verror');
+const assert = require('chai').assert;
+const restifyErrs = require('restify-errors');
+const VError = require('verror');
 
 // internal files being tested
-var lumberjill = require('../lib');
-var stringify = require('../lib/stringify');
-
+const lumberjill = require('../lib');
+const stringify = require('../lib/stringify');
 
 describe('lumberjill', function() {
-
     describe('safe JSON stringify', function() {
-
         it('should serialize empty object into empty string', function() {
             assert.equal(stringify({}), '');
         });
 
         it('should replace undefined with "undefined"', function() {
-            assert.equal(stringify({
-                hello: undefined
-            }), '{\n  "hello": "undefined"\n}');
+            assert.equal(
+                stringify({
+                    hello: undefined
+                }),
+                '{\n  "hello": "undefined"\n}'
+            );
         });
 
         it('should do no formatting with raw options', function() {
-            assert.equal(stringify({
-                hello: undefined
-            }, true), '{"hello":"undefined"}');
+            assert.equal(
+                stringify(
+                    {
+                        hello: undefined
+                    },
+                    true
+                ),
+                '{"hello":"undefined"}'
+            );
         });
 
         it('should handle nulls', function() {
-            assert.equal(stringify({
-                hello: null
-            }), '{\n  "hello": null\n}');
+            assert.equal(
+                stringify({
+                    hello: null
+                }),
+                '{\n  "hello": null\n}'
+            );
         });
 
         it('should handle circular refs', function() {
-            var a = {
+            const a = {
                 foo: 1
             };
-            var b = {
+            const b = {
                 bar: 2
             };
             a.b = b;
@@ -55,9 +64,7 @@ describe('lumberjill', function() {
         });
     });
 
-
     describe('should fail to create logger w/ missing options', function() {
-
         it('should fail without an options object', function() {
             assert.throws(function() {
                 lumberjill.create();
@@ -71,10 +78,8 @@ describe('lumberjill', function() {
         });
     });
 
-
     describe('should log stuff', function() {
-
-        var loggers = [
+        const loggers = [
             lumberjill.create({
                 name: 'test',
                 level: lumberjill.INFO
@@ -88,13 +93,12 @@ describe('lumberjill', function() {
                 timestamp: true
             })
         ];
-        var err = new Error('boom!');
-        var SomethingBadHappenedError =
-            restifyErrs.makeConstructor('SomethingBadHappenedError');
-
+        const err = new Error('boom!');
+        const SomethingBadHappenedError = restifyErrs.makeConstructor(
+            'SomethingBadHappenedError'
+        );
 
         loggers.forEach(function(log) {
-
             it('should log text', function() {
                 assert.doesNotThrow(function() {
                     log.info('hi');
@@ -103,9 +107,12 @@ describe('lumberjill', function() {
 
             it('should log object and text', function() {
                 assert.doesNotThrow(function() {
-                    log.info({
-                        hello: 'world'
-                    }, 'hi');
+                    log.info(
+                        {
+                            hello: 'world'
+                        },
+                        'hi'
+                    );
                 });
             });
 
@@ -116,14 +123,17 @@ describe('lumberjill', function() {
             });
 
             it('should log wrapped VError and text', function() {
-                var wrapErr = new VError({
-                    name: 'SomethingBadHappenedError',
-                    cause: err,
-                    info: {
-                        foo: 1,
-                        bar: 2
-                    }
-                }, 'oh noes!');
+                const wrapErr = new VError(
+                    {
+                        name: 'SomethingBadHappenedError',
+                        cause: err,
+                        info: {
+                            foo: 1,
+                            bar: 2
+                        }
+                    },
+                    'oh noes!'
+                );
 
                 assert.doesNotThrow(function() {
                     log.info(wrapErr, 'hi');
@@ -131,8 +141,7 @@ describe('lumberjill', function() {
             });
 
             it('should log wrapped restify-error and text', function() {
-
-                var wrapErr = new SomethingBadHappenedError({
+                const wrapErr = new SomethingBadHappenedError({
                     cause: err,
                     message: 'oh noes!',
                     info: {
