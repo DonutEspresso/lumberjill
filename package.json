@@ -1,54 +1,54 @@
 {
-  "name": "lumberjill",
-  "version": "1.1.2",
-  "main": "lib/index.js",
-  "description": "a bunyan wrapper for simple CLT logging",
-  "homepage": "https://github.com/DonutEspresso/lumberjill",
-  "author": {
-    "name": "Alex Liu",
-    "email": "donutespresso@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:DonutEspresso/lumberjill.git"
-  },
-  "license": "MIT",
-  "scripts": {
-    "test": "make test"
-  },
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "lumberjill",
-    "bunyan",
-    "verror",
-    "restify-errors",
-    "cli",
-    "serializer",
-    "logging"
-  ],
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "conventional-changelog-angular": "^5.0.3",
-    "conventional-recommended-bump": "^6.0.0",
-    "coveralls": "^3.0.6",
-    "documentation": "^12.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
-    "prettier": "^1.18.2",
-    "unleash": "^2.0.1",
-    "verror": "^1.10.0"
-  },
-  "dependencies": {
-    "assert-plus": "^1.0.0",
-    "bunyan": "^1.8.12",
-    "chalk": "^2.4.1",
-    "json-stringify-safe": "^5.0.1",
-    "lodash": "^4.17.10",
-    "restify-errors": "^8.0.1"
-  }
+    "name": "lumberjill",
+    "version": "1.1.2",
+    "main": "lib/index.js",
+    "description": "a bunyan wrapper for simple CLT logging",
+    "homepage": "https://github.com/DonutEspresso/lumberjill",
+    "author": {
+        "name": "Alex Liu",
+        "email": "donutespresso@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:DonutEspresso/lumberjill.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "test": "make test"
+    },
+    "files": [
+        "lib"
+    ],
+    "keywords": [
+        "lumberjill",
+        "bunyan",
+        "verror",
+        "restify-errors",
+        "cli",
+        "serializer",
+        "logging"
+    ],
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "conventional-changelog-angular": "^5.0.3",
+        "conventional-recommended-bump": "^6.0.0",
+        "coveralls": "^3.0.6",
+        "documentation": "^12.0.0",
+        "eslint": "^6.1.0",
+        "eslint-config-prettier": "^6.0.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "mocha": "^6.2.0",
+        "nyc": "^14.1.1",
+        "prettier": "^1.18.2",
+        "unleash": "^2.0.1",
+        "verror": "^1.10.0"
+    },
+    "dependencies": {
+        "assert-plus": "^1.0.0",
+        "bunyan": "^1.8.12",
+        "chalk": "^4.0.0",
+        "json-stringify-safe": "^5.0.1",
+        "lodash": "^4.17.10",
+        "restify-errors": "^8.0.1"
+    }
 }

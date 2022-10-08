@@ -6,12 +6,13 @@
     -   [Parameters][2]
 -   [raw][3]
 -   [timestamp][4]
--   [write][5]
-    -   [Parameters][6]
--   [create][7]
-    -   [Parameters][8]
--   [stringify][9]
-    -   [Parameters][10]
+-   [forcestdout][5]
+-   [write][6]
+    -   [Parameters][7]
+-   [create][8]
+    -   [Parameters][9]
+-   [stringify][10]
+    -   [Parameters][11]
 
 ## SimpleStream
 
@@ -20,19 +21,25 @@ back out to bunyan binary again.
 
 ### Parameters
 
--   `options` **[Object][11]** an options object
+-   `options` **[Object][12]** an options object
 
 ## raw
 
 when true, emits logs in raw JSON.
 
-Type: [Boolean][12]
+Type: [Boolean][13]
 
 ## timestamp
 
 when true, prepends all logs with timestamps.
 
-Type: [Boolean][12]
+Type: [Boolean][13]
+
+## forcestdout
+
+when true, prepends all logs with timestamps.
+
+Type: [Boolean][13]
 
 ## write
 
@@ -40,9 +47,9 @@ stream's write impl. rolling our own write stream formatter.
 
 ### Parameters
 
--   `record` **[Object][11]** a log record
+-   `record` **[Object][12]** a log record
 
-Returns **[undefined][13]** 
+Returns **[undefined][14]** 
 
 ## create
 
@@ -50,12 +57,12 @@ creates a bunyan logger using the passed in options.
 
 ### Parameters
 
--   `options` **[Object][11]** an option sobject
-    -   `options.name` **[Object][11]** name of the logger
-    -   `options.raw` **[Boolean][12]?** if true, log in raw JSON
-    -   `options.level` **[Boolean][12]?** level of the logger. defaults to info/30
+-   `options` **[Object][12]** an option sobject
+    -   `options.name` **[Object][12]** name of the logger
+    -   `options.raw` **[Boolean][13]?** if true, log in raw JSON
+    -   `options.level` **[Boolean][13]?** level of the logger. defaults to info/30
 
-Returns **[Object][11]** a bunyan logger
+Returns **[Object][12]** a bunyan logger
 
 ## stringify
 
@@ -64,10 +71,10 @@ to replace undefineds with "undefined", and also handles empty/null obj
 
 ### Parameters
 
--   `obj` **[Object][11]** an object to stringify
--   `raw` **[Boolean][12]** when true, log raw so no JSON formatting needed
+-   `obj` **[Object][12]** an object to stringify
+-   `raw` **[Boolean][13]** when true, log raw so no JSON formatting needed
 
-Returns **[String][14]** 
+Returns **[String][15]** 
 
 [1]: #simplestream
 
@@ -77,22 +84,24 @@ Returns **[String][14]**
 
 [4]: #timestamp
 
-[5]: #write
+[5]: #forcestdout
 
-[6]: #parameters-1
+[6]: #write
 
-[7]: #create
+[7]: #parameters-1
 
-[8]: #parameters-2
+[8]: #create
 
-[9]: #stringify
+[9]: #parameters-2
 
-[10]: #parameters-3
+[10]: #stringify
 
-[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[11]: #parameters-3
 
-[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
