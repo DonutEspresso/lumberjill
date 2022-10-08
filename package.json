@@ -1,6 +1,6 @@
 {
     "name": "lumberjill",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "main": "lib/index.js",
     "description": "a bunyan wrapper for simple CLT logging",
     "homepage": "https://github.com/DonutEspresso/lumberjill",
